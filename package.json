@@ -1,0 +1,35 @@
+{
+  "name": "dummy-company-profile",
+  "version": "1.0.0",
+  "description": "Website static untuk company profile menggunakan HTML dan Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=localhost",
+    "dev": "live-server --port=3000 --host=localhost --watch=.",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "tailwindcss",
+    "javascript",
+    "company-profile",
+    "static-website",
+    "responsive",
+    "frontend"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/dummy-company-profile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/dummy-company-profile/issues"
+  },
+  "homepage": "https://github.com/your-username/dummy-company-profile#readme"
+}

@@ -1,0 +1,842 @@
+/* Styling website PT. Karyaghoni Prima Lestari */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --primary-color: #997E34;
+    --secondary-color: #0F172A;
+    --accent-color: #f59e0b;
+    --dark-blue: #1e3a8a;
+    --light-gray: #f8fafc;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --font-family: 'Plus Jakarta Sans', 'Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Animasi profesional */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek parallax profesional */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(1px);
+}
+
+.parallax-element {
+    will-change: transform;
+    transform: translateZ(0);
+    transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.parallax-slow {
+    transform: translate3d(0, 0, 0);
+}
+
+.parallax-medium {
+    transform: translate3d(0, 0, 0);
+}
+
+.parallax-fast {
+    transform: translate3d(0, 0, 0);
+}
+
+/* Elemen melayang untuk parallax */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-element {
+    position: absolute;
+    border: 2px solid rgba(153, 126, 52, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+.floating-element:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.floating-element:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+    animation-duration: 6s;
+}
+
+.floating-element:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+    animation-duration: 10s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Efek hover dengan parallax */
+.professional-hover {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.professional-hover:hover {
+    transform: translateY(-2px) translateZ(0);
+    box-shadow: 0 10px 30px rgba(153, 126, 52, 0.08);
+}
+
+.card-hover {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.card-hover:hover {
+    transform: translateY(-3px) translateZ(0);
+    box-shadow: 0 15px 40px rgba(153, 126, 52, 0.1);
+}
+
+/* Animasi section dengan parallax */
+.section-fade-in {
+    opacity: 0;
+    transform: translateY(50px) translateZ(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+.section-fade-in.animate {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+}
+
+.section-slide-left {
+    opacity: 0;
+    transform: translateX(-50px) translateZ(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+.section-slide-left.animate {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+.section-slide-right {
+    opacity: 0;
+    transform: translateX(50px) translateZ(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+.section-slide-right.animate {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+/* Efek tombol dengan parallax */
+.btn-professional {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.btn-professional::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-professional:hover::before {
+    left: 100%;
+}
+
+.btn-professional:hover {
+    transform: translateY(-1px) translateZ(0);
+    box-shadow: 0 8px 25px rgba(153, 126, 52, 0.2);
+}
+
+/* Load More Text Buttons */
+#portfolio-load-more button,
+#certificate-load-more button {
+    position: relative;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#portfolio-load-more button:hover,
+#certificate-load-more button:hover {
+    color: #b8860b;
+    transform: translateY(-1px);
+}
+
+#portfolio-load-more button i,
+#certificate-load-more button i {
+    transition: transform 0.3s ease;
+}
+
+#portfolio-load-more button:hover i,
+#certificate-load-more button:hover i {
+    transform: translateY(2px);
+}
+
+/* Load More Animation */
+@keyframes loadMoreFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.load-more-item {
+    animation: loadMoreFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animasi tombol yang halus */
+.btn-professional {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-professional:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--secondary-color);
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+/* Plus Jakarta Sans specific font optimizations */
+.jakarta-light {
+    font-family: var(--font-family);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+}
+
+.jakarta-regular {
+    font-family: var(--font-family);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.jakarta-medium {
+    font-family: var(--font-family);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.jakarta-semibold {
+    font-family: var(--font-family);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.jakarta-bold {
+    font-family: var(--font-family);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.jakarta-extrabold {
+    font-family: var(--font-family);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* Enhanced text rendering for Jakarta Sans */
+p, span, div, a, button, input, textarea, select {
+    font-family: var(--font-family);
+}
+
+/* Logo styling with Jakarta Sans */
+.logo-text {
+    font-family: var(--font-family);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* Navigation text */
+nav a {
+    font-family: var(--font-family);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+/* Button text */
+button, .btn {
+    font-family: var(--font-family);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* Form labels and inputs */
+label, input, textarea, select {
+    font-family: var(--font-family);
+}
+
+/* Footer text */
+footer {
+    font-family: var(--font-family);
+}
+
+.text-responsive-xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-responsive-2xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-responsive-3xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+/* Hero Section Enhancements */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(99, 102, 241, 0.1) 100%);
+    pointer-events: none;
+}
+
+/* Floating Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Enhanced Card Styles */
+.card-modern {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Service Card Hover Effects */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+/* Portfolio Filter Styles */
+.portfolio-filter {
+    cursor: pointer;
+    user-select: none;
+}
+
+.portfolio-filter.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.portfolio-item {
+    transition: all 0.3s ease;
+}
+
+.portfolio-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    display: none;
+}
+
+/* Team Member Cards */
+.team-member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+.team-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-social {
+    transform: translateY(0);
+}
+
+/* Button Enhancements */
+.btn-primary-modern {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary-modern:hover::before {
+    left: 100%;
+}
+
+.btn-primary-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.5);
+}
+
+/* Form Enhancements */
+.form-modern input,
+.form-modern textarea,
+.form-modern select {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-modern input:focus,
+.form-modern textarea:focus,
+.form-modern select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Navbar Enhancements */
+.navbar-modern {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Contact Section Special Styling */
+.contact-info-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Footer Enhancements */
+.footer-modern {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #0f172a 100%);
+    position: relative;
+}
+
+.footer-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.5), transparent);
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+/* Stats Counter Animation */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-counter {
+    animation: countUp 1s ease-out forwards;
+}
+
+/* Loading States */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue);
+}
+
+
+@media (max-width: 1024px) {
+    .text-responsive-3xl {
+        font-size: 2rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-responsive-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    
+    .text-responsive-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    
+    .text-responsive-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .card-modern {
+        margin: 0 1rem;
+    }
+}
+
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    .btn-primary-modern,
+    .contact-info-card {
+        background: #333 !important;
+        color: #fff !important;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+@media (prefers-contrast: high) {
+    .card-modern {
+        border: 2px solid #000;
+    }
+    
+    .btn-primary-modern {
+        border: 2px solid #000;
+    }
+}

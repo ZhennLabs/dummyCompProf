@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Karyaghoni Prima Lestari - General Contractor & Supplier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#997E34',
+                        secondary: '#0F172A',
+                        accent: '#f59e0b',
+                        'dark-gold': '#7A6629',
+                        'light-gray': '#f8fafc'
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', 'Jakarta Sans', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white font-sans">
+    <!-- Bar atas website -->
+    <div class="bg-secondary text-white py-2 hidden lg:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center text-sm">
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-2 text-primary"></i>
+                        <span>info@karyaghoni.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone mr-2 text-primary"></i>
+                        <span>+62 21 2345 6789</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-primary transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-primary transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-primary transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="hover:text-primary transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu navigasi -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 mr-3 flex items-center justify-center">
+                                <img src="assets/images/LOGO KPL.png" alt="PT Karyaghoni Prima Lestari Logo" class="w-12 h-12 object-contain">
+                            </div>
+                            <div>
+                                <h1 class="text-2xl font-black text-secondary uppercase tracking-wider">KARYAGHONI</h1>
+                                <p class="text-xs text-primary font-bold -mt-1 tracking-widest">PRIMA LESTARI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-secondary hover:text-primary transition duration-300 font-bold text-sm uppercase tracking-wider">Home</a>
+                    <a href="#about" class="text-secondary hover:text-primary transition duration-300 font-bold text-sm uppercase tracking-wider">About</a>
+                    <a href="#services" class="text-secondary hover:text-primary transition duration-300 font-bold text-sm uppercase tracking-wider">Services</a>
+                    <a href="#portfolio" class="text-secondary hover:text-primary transition duration-300 font-bold text-sm uppercase tracking-wider">Projects</a>
+                    <a href="#certifications" class="text-secondary hover:text-primary transition duration-300 font-bold text-sm uppercase tracking-wider">Certifications</a>
+                    <a href="#contact" class="text-secondary hover:text-primary transition duration-300 font-bold text-sm uppercase tracking-wider">Contact</a>
+                </div>
+                
+                <div class="hidden lg:flex items-center">
+                    <a href="#contact" class="bg-primary hover:bg-dark-gold text-white px-8 py-3 font-black text-sm uppercase tracking-wider transition duration-300">
+                        FREE QUOTE
+                    </a>
+                </div>
+                
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-secondary hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+            <div class="px-4 pt-4 pb-6 space-y-4">
+                <a href="#home" class="block text-secondary hover:text-primary font-semibold text-sm uppercase tracking-wide">Home</a>
+                <a href="#about" class="block text-secondary hover:text-primary font-semibold text-sm uppercase tracking-wide">About</a>
+                <a href="#services" class="block text-secondary hover:text-primary font-semibold text-sm uppercase tracking-wide">Services</a>
+                <a href="#portfolio" class="block text-secondary hover:text-primary font-semibold text-sm uppercase tracking-wide">Projects</a>
+                <a href="#contact" class="block text-secondary hover:text-primary font-semibold text-sm uppercase tracking-wide">Contact</a>
+                <a href="#contact" class="block bg-primary text-white px-6 py-3 rounded font-bold text-sm uppercase tracking-wider text-center mt-4">
+                    GET QUOTE
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bagian utama website -->
+    <section id="home" class="relative min-h-screen flex items-center parallax-container" style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;">
+        <div class="parallax-bg" style="background: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;"></div>
+        
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        
+        <div class="absolute inset-0 bg-secondary bg-opacity-75"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="parallax-element section-slide-left">
+                    <div class="mb-6">
+                        <span class="inline-block bg-primary text-white px-6 py-2 text-sm font-bold uppercase tracking-wider">
+                            #1 Construction Company
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight">
+                        We Build Your
+                        <span class="text-primary">Dream</span>
+                        <br>Into Reality
+                    </h1>
+                    
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        Professional construction services with over 15 years of expertise in Design & Engineering, Electronic Systems, and Integrated Construction solutions.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#contact" class="bg-primary hover:bg-dark-gold text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition duration-300 inline-flex items-center justify-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            Get Free Quote
+                        </a>
+                        <a href="#about" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition duration-300 inline-flex items-center justify-center">
+                            <i class="fas fa-play mr-2"></i>
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Company Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-600">
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-black text-primary mb-1">200+</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Projects Done</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-black text-primary mb-1">15+</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Years Experience</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-black text-primary mb-1">100%</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:flex justify-end parallax-element section-slide-right">
+                    <div class="bg-white shadow-xl p-6 max-w-sm w-full border-t-4 border-primary">
+                        <div class="text-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-calculator text-white text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-black text-secondary mb-1 uppercase">Request Quote</h3>
+                            <p class="text-gray-600 text-xs">Get professional consultation</p>
+                        </div>
+                        
+                        <form class="space-y-3">
+                            <div>
+                                <input type="text" placeholder="Full Name *" class="w-full px-3 py-2 border-2 border-gray-200 focus:outline-none focus:border-primary text-xs font-medium">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email Address *" class="w-full px-3 py-2 border-2 border-gray-200 focus:outline-none focus:border-primary text-xs font-medium">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Phone Number *" class="w-full px-3 py-2 border-2 border-gray-200 focus:outline-none focus:border-primary text-xs font-medium">
+                            </div>
+                            <div>
+                                <select class="w-full px-3 py-2 border-2 border-gray-200 focus:outline-none focus:border-primary text-xs font-medium text-gray-700">
+                                    <option>Select Service Type</option>
+                                    <option>Design & Engineering</option>
+                                    <option>Electronic & Automation</option>
+                                    <option>Construction</option>
+                                    <option>Material Supply</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea placeholder="Project Description" rows="2" class="w-full px-3 py-2 border-2 border-gray-200 focus:outline-none focus:border-primary text-xs font-medium"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-dark-gold text-white py-3 text-xs font-black uppercase tracking-wider transition duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Request
+                            </button>
+                        </form>
+                        
+                        <!-- Contact Info -->
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center text-xs text-gray-600 mb-1">
+                                <i class="fas fa-phone text-primary mr-2"></i>
+                                <span>+62 21 2345 6789</span>
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <i class="fas fa-envelope text-primary mr-2"></i>
+                                <span>info@karyaghoni.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang perusahaan -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="parallax-element section-slide-left">
+                    <div class="mb-6">
+                        <span class="text-primary font-bold text-sm uppercase tracking-wider">About Company</span>
+                        <h2 class="text-4xl font-black text-secondary mt-4 mb-6">
+                            15+ Years of Building
+                            <span class="text-primary">Excellence</span>
+                        </h2>
+                    </div>
+                    
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        PT. Karyaghoni Prima Lestari is a leading construction company specializing in Design & Engineering, Electronic & Automation Systems, and Integrated Construction services across Indonesia since 2009.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-primary mb-2">200+</div>
+                            <div class="text-sm text-gray-600 uppercase">Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-primary mb-2">15+</div>
+                            <div class="text-sm text-gray-600 uppercase">Years</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-primary mb-2">350+</div>
+                            <div class="text-sm text-gray-600 uppercase">Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-primary mb-2">100%</div>
+                            <div class="text-sm text-gray-600 uppercase">Quality</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-primary hover:bg-dark-gold text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition duration-300 inline-flex items-center">
+                        <i class="fas fa-arrow-right mr-2"></i>
+                        Get Started
+                    </a>
+                </div>
+                
+                <div class="relative parallax-element section-slide-right">
+                    <div class="bg-gray-50 p-8">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Construction Team" class="w-full h-80 object-cover">
+                        
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl border-l-4 border-primary max-w-xs">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary">ISO Certified</h4>
+                                    <p class="text-gray-600 text-sm">Quality Management</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">Certified quality standards ensuring excellence in every project we deliver.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi misi dan nilai perusahaan -->
+    <section class="py-20 bg-white relative overflow-hidden parallax-container">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-32 h-32 border-4 border-primary transform rotate-45 parallax-slow"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 border-4 border-secondary transform rotate-12 parallax-medium"></div>
+            <div class="absolute bottom-32 left-32 w-28 h-28 border-4 border-primary transform -rotate-12 parallax-fast"></div>
+            <div class="absolute bottom-20 right-10 w-20 h-20 border-4 border-secondary transform rotate-45 parallax-slow"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 parallax-element section-fade-in">
+                <div class="inline-flex items-center bg-primary/10 px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-compass text-primary mr-3"></i>
+                    <span class="text-primary font-bold text-sm uppercase tracking-wider">Our Foundation</span>
+                </div>
+                <h2 class="text-5xl lg:text-6xl font-black text-secondary mb-6 leading-tight">
+                    The <span class="text-primary">Blueprint</span><br>
+                    of Our Success
+                </h2>
+            </div>
+            
+            <!-- Vision Section -->
+            <div class="mb-24">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-transparent blur-2xl"></div>
+                            <div class="relative bg-white border-l-8 border-primary p-8 shadow-2xl">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-eye text-white text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-3xl font-black text-secondary uppercase tracking-wider">Vision</h3>
+                                </div>
+                                <div class="h-1 w-24 bg-primary mb-6"></div>
+                                <p class="text-lg text-gray-700 leading-relaxed font-medium">
+                                    To become a <strong class="text-primary">leading construction company</strong> that contributes to National Development through innovative solutions, quality services, and sustainable practices that create lasting value for communities and the environment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-2 flex justify-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary to-yellow-600 rounded-full flex items-center justify-center shadow-xl">
+                            <i class="fas fa-arrow-right text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-5">
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-building text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Leading Construction Excellence</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-leaf text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Sustainable Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Community Value Creation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div>
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-black text-secondary mb-4 uppercase tracking-wider">Our Mission</h3>
+                    <div class="w-32 h-1 bg-primary mx-auto"></div>
+                </div>
+                
+                
+                <div class="grid lg:grid-cols-3 gap-8 mb-8">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent transform professional-hover"></div>
+                        <div class="relative p-8 text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white font-black text-2xl">01</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary mb-4">Company Growth</h4>
+                            <p class="text-gray-600 leading-relaxed">Improving the life and growth of the company through continuous innovation and excellence</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent transform professional-hover"></div>
+                        <div class="relative p-8 text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-secondary to-gray-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white font-black text-2xl">02</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary mb-4">Quality Partnership</h4>
+                            <p class="text-gray-600 leading-relaxed">Become a committed partner delivering the best quality services and solutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent transform professional-hover"></div>
+                        <div class="relative p-8 text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white font-black text-2xl">03</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary mb-4">National Development</h4>
+                            <p class="text-gray-600 leading-relaxed">Play an active role in the success of National Development with optimal quality</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent transform professional-hover"></div>
+                        <div class="relative p-8 text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white font-black text-2xl">04</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary mb-4">Business Solutions</h4>
+                            <p class="text-gray-600 leading-relaxed">Contribute and provide real solutions in the development of the business world</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent transform professional-hover"></div>
+                        <div class="relative p-8 text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white font-black text-2xl">05</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary mb-4">Job Creation</h4>
+                            <p class="text-gray-600 leading-relaxed">Participate as job providers contributing to economic growth and prosperity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl lg:text-4xl font-extrabold text-secondary mb-4 jakarta-extrabold">Core Values</h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto jakarta-regular">
+                        Our fundamental principles that drive every project and partnership
+                    </p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                    <div class="text-center group">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary to-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6 professional-hover">
+                            <i class="fas fa-medal text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-secondary mb-3 jakarta-bold">Quality</h4>
+                        <p class="text-gray-600 jakarta-regular">Excellence in every aspect of our work</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-24 h-24 bg-gradient-to-br from-secondary to-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6 professional-hover">
+                            <i class="fas fa-handshake text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-secondary mb-3 jakarta-bold">Partnership</h4>
+                        <p class="text-gray-600 jakarta-regular">Building lasting relationships with clients</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary to-yellow-700 rounded-2xl flex items-center justify-center mx-auto mb-6 professional-hover">
+                            <i class="fas fa-shield-alt text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-secondary mb-3 jakarta-bold">Safety</h4>
+                        <p class="text-gray-600 jakarta-regular">HSE standards in all operations</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-24 h-24 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center mx-auto mb-6 professional-hover">
+                            <i class="fas fa-lightbulb text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-secondary mb-3 jakarta-bold">Innovation</h4>
+                        <p class="text-gray-600 jakarta-regular">Modern solutions for every challenge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan yang kami sediakan -->
+    <section id="services" class="py-20 bg-gray-50 parallax-container">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 parallax-element section-fade-in">
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Our Services</span>
+                <h2 class="text-4xl font-black text-secondary mt-4 mb-6">
+                    Professional Construction
+                    <span class="text-primary">Solutions</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive services from design to completion, ensuring quality and excellence in every project.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white group hover:bg-secondary professional-hover border-l-4 border-primary parallax-element section-slide-left">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary rounded flex items-center justify-center mb-6 group-hover:bg-white transition duration-500">
+                            <i class="fas fa-drafting-compass text-white text-2xl group-hover:text-primary transition duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-4 group-hover:text-white transition duration-500">Design & Engineering</h3>
+                        <p class="text-gray-600 mb-6 group-hover:text-gray-300 transition duration-500">
+                            Professional architectural design and structural engineering services with modern technology and experienced workforce.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Architectural Design
+                            </li>
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Structural Engineering
+                            </li>
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Modern Technology
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-bold group-hover:text-white transition duration-500 inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                <div class="bg-white group hover:bg-secondary professional-hover border-l-4 border-primary parallax-element section-fade-in">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary rounded flex items-center justify-center mb-6 group-hover:bg-white transition duration-500">
+                            <i class="fas fa-microchip text-white text-2xl group-hover:text-primary transition duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-4 group-hover:text-white transition duration-500">Electronic & Automation</h3>
+                        <p class="text-gray-600 mb-6 group-hover:text-gray-300 transition duration-500">
+                            Advanced electronic systems and automation solutions for modern building infrastructure projects.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Building Automation
+                            </li>
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Security Systems
+                            </li>
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Smart Solutions
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-bold group-hover:text-white transition duration-500 inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                <div class="bg-white group hover:bg-secondary professional-hover border-l-4 border-primary parallax-element section-slide-right">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary rounded flex items-center justify-center mb-6 group-hover:bg-white transition duration-500">
+                            <i class="fas fa-building text-white text-2xl group-hover:text-primary transition duration-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-4 group-hover:text-white transition duration-500">Integrated Construction</h3>
+                        <p class="text-gray-600 mb-6 group-hover:text-gray-300 transition duration-500">
+                            Complete construction services from foundation to finishing with quality materials and expert craftsmanship.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Complete Construction
+                            </li>
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Quality Materials
+                            </li>
+                            <li class="flex items-center text-gray-600 group-hover:text-gray-300 transition duration-500">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Expert Craftsmanship
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-bold group-hover:text-white transition duration-500 inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ajakan untuk memulai proyek -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-black text-white mb-6">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-xl text-white mb-8 max-w-2xl mx-auto">
+                    Contact us today for professional consultation and free quote for your construction needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-sm font-black uppercase tracking-wider transition duration-300 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+6221234567890" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-sm font-black uppercase tracking-wider transition duration-300 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio dan proyek -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Our Portfolio</span>
+                <h2 class="text-4xl font-black text-secondary mt-4 mb-6">
+                    Proven Track Record
+                    <span class="text-primary">Since 2014</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Over a decade of successful project delivery across various sectors, from government infrastructure to private commercial developments.
+                </p>
+            </div>
+            
+            
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-l-4 border-primary">
+                    <div class="text-3xl font-black text-primary mb-2">21+</div>
+                    <div class="text-sm text-gray-600 uppercase font-semibold">Major Projects</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-l-4 border-secondary">
+                    <div class="text-3xl font-black text-secondary mb-2">11</div>
+                    <div class="text-sm text-gray-600 uppercase font-semibold">Years Experience</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-l-4 border-primary">
+                    <div class="text-3xl font-black text-primary mb-2">15+</div>
+                    <div class="text-sm text-gray-600 uppercase font-semibold">Satisfied Clients</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-l-4 border-secondary">
+                    <div class="text-3xl font-black text-secondary mb-2">100%</div>
+                    <div class="text-sm text-gray-600 uppercase font-semibold">Completion Rate</div>
+                </div>
+            </div>
+            
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="portfolio-filter active bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300" data-filter="all">
+                    All Projects
+                </button>
+                <button class="portfolio-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md" data-filter="civil">
+                    Civil Work
+                </button>
+                <button class="portfolio-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md" data-filter="steel">
+                    Steel & Structure
+                </button>
+                <button class="portfolio-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md" data-filter="special">
+                    Special Projects
+                </button>
+            </div>
+            
+            <div id="portfolio-grid" class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="civil">
+                    <div class="bg-gradient-to-br from-secondary to-gray-800 p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Civil Work</span>
+                            <span class="text-sm font-semibold opacity-80">2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Infrastructure Development</h3>
+                        <p class="text-sm opacity-90">Pembangunan Barak, Kompi, Rumdis Yonif 763 & 764</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Pusziad</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-building text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="civil">
+                    <div class="bg-gradient-to-br from-secondary to-gray-800 p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Civil Work</span>
+                            <span class="text-sm font-semibold opacity-80">2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Military Infrastructure</h3>
+                        <p class="text-sm opacity-90">Pembangunan Dapur Sehat BGN</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Badan Gizi Nasional (BGN)</p>
+                            </div>
+                            <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-utensils text-secondary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="civil">
+                    <div class="bg-gradient-to-br from-secondary to-gray-800 p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Civil Work</span>
+                            <span class="text-sm font-semibold opacity-80">2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Construction Development</h3>
+                        <p class="text-sm opacity-90">Pekerjaan Pembangunan Gedung Serbaguna Dislaikad</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Dislaikad</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-warehouse text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="steel">
+                    <div class="bg-gradient-to-br from-primary to-dark-gold p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-white text-primary text-xs px-3 py-1 rounded-full uppercase font-bold">Steel & Structure</span>
+                            <span class="text-sm font-semibold opacity-80">2019</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Stainless Steel Manufacturing</h3>
+                        <p class="text-sm opacity-90">Pekerjaan Pembuatan Tiang Bendera Stainless Steel</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">BSSN Sawangan</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-flag text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="steel">
+                    <div class="bg-gradient-to-br from-primary to-dark-gold p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-white text-primary text-xs px-3 py-1 rounded-full uppercase font-bold">Steel & Structure</span>
+                            <span class="text-sm font-semibold opacity-80">2017</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Infrastructure Rehabilitation</h3>
+                        <p class="text-sm opacity-90">Rehabilitasi Bangunan Denhar di Denharpsa Int. III</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Kepala Zidam III / Siliwangi</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-hammer text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-secondary" data-category="special">
+                    <div class="bg-gradient-to-br from-gray-700 to-secondary p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Special Project</span>
+                            <span class="text-sm font-semibold opacity-80">2014</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Banking Infrastructure</h3>
+                        <p class="text-sm opacity-90">Pekerjaan Sipil & Sanitary - Bank Indonesia Papua</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Bank Indonesia</p>
+                            </div>
+                            <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-secondary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="civil">
+                    <div class="bg-gradient-to-br from-secondary to-gray-800 p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Civil Work</span>
+                            <span class="text-sm font-semibold opacity-80">2022</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Complex Infrastructure</h3>
+                        <p class="text-sm opacity-90">Pek. Pemb. Rumdis SBSN Kodim 1701 & Prasarana</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Zidam XVII/CEN</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-city text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="steel">
+                    <div class="bg-gradient-to-br from-primary to-dark-gold p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-white text-primary text-xs px-3 py-1 rounded-full uppercase font-bold">Steel & Structure</span>
+                            <span class="text-sm font-semibold opacity-80">2014</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Industrial Manufacturing</h3>
+                        <p class="text-sm opacity-90">Pekerjaan Louvre Alumunium</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">PT. Mayora Indah Jayanthi Balaraja</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-industry text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-xl overflow-hidden shadow-lg card-hover portfolio-item border-l-4 border-primary" data-category="civil">
+                    <div class="bg-gradient-to-br from-secondary to-gray-800 p-6 text-white">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Civil Work</span>
+                            <span class="text-sm font-semibold opacity-80">2020</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Transportation Infrastructure</h3>
+                        <p class="text-sm opacity-90">Pekerjaan Rehab Rumdis G-90, H-70, K-45, K-38</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Client</p>
+                                <p class="font-semibold text-secondary">Kodam Jaya</p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-road text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tombol Load More untuk Portfolio (hanya muncul di mobile) -->
+            <div id="portfolio-load-more" class="text-center mt-8 lg:hidden">
+                <button class="text-primary hover:text-dark-gold font-semibold text-sm transition duration-300 inline-flex items-center">
+                    Load More Projects
+                    <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                </button>
+            </div>
+            
+            <div class="text-center mt-16">
+                <div class="bg-white p-8 rounded-2xl shadow-xl max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Ready to Start Your Project?</h3>
+                    <p class="text-gray-600 mb-6">Join our list of satisfied clients and let us bring your construction vision to life with our proven expertise.</p>
+                    <a href="#contact" class="bg-primary hover:bg-dark-gold text-white px-8 py-3 font-bold text-sm uppercase tracking-wider transition duration-300 inline-flex items-center">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Start Your Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sertifikat dan akreditasi -->
+    <section id="certifications" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Quality Assurance</span>
+                <h2 class="text-4xl font-black text-secondary mt-4 mb-6">
+                    Certified Excellence &
+                    <span class="text-primary">Accreditations</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our commitment to quality is validated through comprehensive certifications and industry accreditations, ensuring every project meets the highest standards.
+                </p>
+            </div>
+            
+            
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mb-16">
+                <div class="bg-gradient-to-br from-primary to-dark-gold p-6 rounded-xl text-white text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <div class="text-2xl font-black mb-1">15+</div>
+                    <div class="text-sm uppercase tracking-wider opacity-90">Certifications</div>
+                </div>
+                <div class="bg-gradient-to-br from-secondary to-gray-700 p-6 rounded-xl text-white text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-white text-2xl"></i>
+                    </div>
+                    <div class="text-2xl font-black mb-1">ISO</div>
+                    <div class="text-sm uppercase tracking-wider opacity-90">Compliant</div>
+                </div>
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl text-white text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <div class="text-2xl font-black mb-1">100%</div>
+                    <div class="text-sm uppercase tracking-wider opacity-90">Safety Standards</div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-700 to-primary p-6 rounded-xl text-white text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <div class="text-2xl font-black mb-1">Gov</div>
+                    <div class="text-sm uppercase tracking-wider opacity-90">Approved</div>
+                </div>
+            </div>
+            
+            
+            <div class="mb-12">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="cert-filter active bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300" data-filter="all">
+                        All Certificates
+                    </button>
+                    <button class="cert-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md border-2 border-gray-200" data-filter="iso">
+                        ISO Standards
+                    </button>
+                    <button class="cert-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md border-2 border-gray-200" data-filter="safety">
+                        Safety & HSE
+                    </button>
+                    <button class="cert-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md border-2 border-gray-200" data-filter="technical">
+                        Technical Skills
+                    </button>
+                    <button class="cert-filter bg-white text-secondary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition duration-300 shadow-md border-2 border-gray-200" data-filter="government">
+                        Government License
+                    </button>
+                </div>
+            </div>
+            
+            <div id="certificate-grid" class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-primary" data-category="iso">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <!-- Hover overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full uppercase font-bold">ISO Standards</span>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">ISO 9001:2015</h4>
+                        <p class="text-xs text-gray-600">Quality Management System</p>
+                    </div>
+                </div>
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-primary" data-category="iso">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full uppercase font-bold">ISO Standards</span>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">ISO 14001:2015</h4>
+                        <p class="text-xs text-gray-600">Environmental Management</p>
+                    </div>
+                </div>
+                
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-secondary" data-category="safety">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-secondary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-secondary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full uppercase font-bold">Safety & HSE</span>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">OHSAS 18001</h4>
+                        <p class="text-xs text-gray-600">Occupational Health & Safety</p>
+                    </div>
+                </div>
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-secondary" data-category="safety">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-secondary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-secondary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full uppercase font-bold">Safety & HSE</span>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">HSE Management</h4>
+                        <p class="text-xs text-gray-600">Health Safety Environment</p>
+                    </div>
+                </div>
+                
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-primary" data-category="technical">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full uppercase font-bold">Technical Skills</span>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">Construction Management</h4>
+                        <p class="text-xs text-gray-600">Project Management Professional</p>
+                    </div>
+                </div>
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-primary" data-category="technical">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full uppercase font-bold">Technical Skills</span>
+                            <span class="text-xs text-gray-500">2023</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">Electronic Systems</h4>
+                        <p class="text-xs text-gray-600">Automation & Control Systems</p>
+                    </div>
+                </div>
+                
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-secondary" data-category="government">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-secondary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-secondary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full uppercase font-bold">Government License</span>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">SIUP Konstruksi</h4>
+                        <p class="text-xs text-gray-600">Construction Business License</p>
+                    </div>
+                </div>
+                
+                <div class="group cert-item bg-white rounded-xl shadow-lg card-hover border-l-4 border-secondary" data-category="government">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative ">
+                            <div class="text-center">
+                                <i class="fas fa-file-contract text-4xl text-gray-400 mb-3"></i>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Certificate Image</div>
+                            </div>
+                            <div class="absolute inset-0 bg-secondary/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-secondary px-4 py-2 rounded-lg font-semibold text-sm">
+                                    <i class="fas fa-eye mr-2"></i>View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full uppercase font-bold">Government License</span>
+                            <span class="text-xs text-gray-500">2024</span>
+                        </div>
+                        <h4 class="font-bold text-secondary text-sm mb-1">PKP Certificate</h4>
+                        <p class="text-xs text-gray-600">Tax Registration Certificate</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tombol Load More untuk Certificates (hanya muncul di mobile) -->
+            <div id="certificate-load-more" class="text-center mt-8 lg:hidden">
+                <button class="text-primary hover:text-dark-gold font-semibold text-sm transition duration-300 inline-flex items-center">
+                    Load More Certificates
+                    <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                </button>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl max-w-3xl mx-auto">
+                    <i class="fas fa-shield-check text-primary text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Verified & Authentic Certifications</h3>
+                    <p class="text-gray-600 mb-6">All certificates are regularly updated and verified by respective authorities to ensure compliance with latest industry standards.</p>
+                    <a href="#contact" class="bg-primary hover:bg-dark-gold text-white px-6 py-3 font-bold text-sm uppercase tracking-wider transition duration-300 inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i>
+                        Request Certificate Copies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak dan hubungi kami -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header Section -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-primary/10 px-4 py-2 rounded-full mb-6">
+                    <i class="fas fa-handshake text-primary mr-2"></i>
+                    <span class="text-primary font-semibold">Let's Collaborate</span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Contact Us
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-400">Today</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Free consultation for your construction project. Our expert team is ready to help bring your building vision to life.
+                </p>
+            </div>
+
+            <!-- Quick Contact Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <a href="tel:+622112345678" class="group bg-white border-2 border-gray-200 hover:border-primary rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Call Direct</h3>
+                    <p class="text-primary font-semibold text-lg">+62 21 1234 5678</p>
+                    <p class="text-gray-500 text-sm mt-1">Mon - Fri, 08:00-17:00</p>
+                </a>
+
+                <a href="https://wa.me/6281234567890" class="group bg-white border-2 border-gray-200 hover:border-green-500 rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">WhatsApp</h3>
+                    <p class="text-green-600 font-semibold text-lg">+62 812 3456 7890</p>
+                    <p class="text-gray-500 text-sm mt-1">Quick response 24/7</p>
+                </a>
+
+                <a href="mailto:info@karyaghoni.com" class="group bg-white border-2 border-gray-200 hover:border-blue-500 rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Email</h3>
+                    <p class="text-blue-600 font-semibold text-lg">info@karyaghoni.com</p>
+                    <p class="text-gray-500 text-sm mt-1">Reply within 24 hours</p>
+                </a>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div>
+                    <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Send Message</h3>
+                            <p class="text-gray-600">Tell us about your project needs in detail</p>
+                        </div>
+                        
+                        <form class="space-y-6" id="contact-form">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                           placeholder="John">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                           placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                       placeholder="john.doe@email.com">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                       placeholder="+62 812 3456 7890">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">Service Type</label>
+                                <select id="service" name="service" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+                                    <option value="">Select service you need</option>
+                                    <option value="design">Design & Engineering</option>
+                                    <option value="electronic">Electronic & Automation</option>
+                                    <option value="construction">Integrated Construction</option>
+                                    <option value="supply">General Supply</option>
+                                    <option value="maintenance">Maintenance Services</option>
+                                    <option value="consultation">Technical Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none" 
+                                          placeholder="Tell us about project details, budget estimate, timeline, or any other questions..."></textarea>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-gradient-to-r from-primary to-yellow-400 hover:from-yellow-400 hover:to-primary text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Company Info -->
+                <div class="space-y-8">
+                    <!-- Office Location -->
+                    <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Office Location</h3>
+                                <p class="text-gray-600 text-sm">Visit us directly</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Address</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Jl. Bisnis Raya No. 123<br>
+                                    Jakarta Selatan 12345<br>
+                                    Indonesia
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Business Hours</h4>
+                                <div class="space-y-1 text-gray-600">
+                                    <div class="flex justify-between">
+                                        <span>Monday - Friday</span>
+                                        <span class="font-medium">08:00 - 17:00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Saturday</span>
+                                        <span class="font-medium">08:00 - 14:00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Sunday</span>
+                                        <span class="text-red-500 font-medium">Closed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Free Consultation -->
+                    <div class="bg-gradient-to-br from-primary to-yellow-400 rounded-2xl p-8 text-white shadow-xl">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-gift text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">FREE Consultation</h3>
+                            <p class="text-white/90">Get project needs analysis at no cost</p>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i>
+                                <span>30-minute consultation with experts</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i>
+                                <span>Cost estimate and timeline</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i>
+                                <span>Best solution recommendations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i>
+                                <span>No purchase commitment</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="w-full bg-white hover:bg-gray-100 text-primary font-bold py-3 px-6 rounded-lg transition duration-300 inline-block text-center">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Schedule Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer website -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-3xl font-extrabold mb-6 logo-text">
+                        <span class="text-primary">KARYAGHONI</span>
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed jakarta-regular">
+                        Building excellence through quality construction services. Professional solutions for Design & Engineering, Electronic Systems, and Integrated Construction.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-yellow-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-yellow-600 transition duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-yellow-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-yellow-600 transition duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#services" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Design & Engineering</a></li>
+                        <li><a href="#services" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Electronic & Automation</a></li>
+                        <li><a href="#services" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Integrated Construction</a></li>
+                        <li><a href="#services" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>General Supply</a></li>
+                        <li><a href="#services" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Maintenance Services</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Technical Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#about" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>About Us</a></li>
+                        <li><a href="#certifications" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Certifications</a></li>
+                        <li><a href="#portfolio" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Portfolio</a></li>
+                        <li><a href="#" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Careers</a></li>
+                        <li><a href="#" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Blog</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition duration-300 flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe to get the latest construction industry updates and project insights.</p>
+                    <form class="space-y-4">
+                        <div class="relative">
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400">
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-yellow-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                    <div class="mt-6">
+                        <h5 class="font-semibold mb-3">Contact Info</h5>
+                        <div class="space-y-2 text-gray-300 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-primary mr-2"></i>
+                                <span>+62 21 1234 5678</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-primary mr-2"></i>
+                                <span>info@karyaghoni.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-300 text-sm mb-4 md:mb-0">
+                        &copy; 2025 PT. Karyaghoni Prima Lestari. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6 text-sm text-gray-300">
+                        <a href="#" class="hover:text-primary transition duration-300">Privacy Policy</a>
+                        <a href="#" class="hover:text-primary transition duration-300">Terms of Service</a>
+                        <a href="#" class="hover:text-primary transition duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
