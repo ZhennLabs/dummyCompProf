@@ -146,12 +146,12 @@ function initNavbarScroll() {
     }
 }
 
-// Professional scroll animations with Intersection Observer
+// Simple scroll animations - No more jentik!
 function initAnimations() {
-    // More conservative observer options for professional feel
+    // Simple observer options
     const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -159,38 +159,24 @@ function initAnimations() {
             if (entry.isIntersecting) {
                 const target = entry.target;
                 
-                // Add subtle professional animation classes
-                target.style.opacity = '0';
-                target.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    target.style.opacity = '1';
-                    target.style.transform = 'translateY(0)';
-                }, 50);
-                
-                // Staggered animation for child elements (very subtle)
-                const children = target.querySelectorAll('.portfolio-item, .cert-item, .service-card');
-                children.forEach((child, index) => {
-                    child.style.opacity = '0';
-                    child.style.transform = 'translateY(15px)';
+                // Simple one-time animation without jentik
+                if (!target.classList.contains('animated')) {
+                    target.classList.add('animate-fade-in');
+                    target.classList.add('animated');
                     
-                    setTimeout(() => {
-                        child.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                        child.style.opacity = '1';
-                        child.style.transform = 'translateY(0)';
-                    }, index * 80 + 200);
-                });
-                
-                observer.unobserve(target);
+                    // Unobserve immediately to prevent re-trigger
+                    observer.unobserve(target);
+                }
             }
         });
     }, observerOptions);
     
-    // Only observe main sections, not individual cards
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        observer.observe(section);
+    // Only observe elements that need animation
+    const animatedElements = document.querySelectorAll('.parallax-element, .section-fade-in, .section-slide-left, .section-slide-right');
+    animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        observer.observe(element);
     });
 }
 
@@ -299,61 +285,39 @@ function animateCounter(element, start, end, duration, prefix = '', suffix = '')
     requestAnimationFrame(updateCounter);
 }
 
-// Efek parallax profesional
+// Enhanced parallax with proper background support
 function initProfessionalParallax() {
     let ticking = false;
-    
-    
     const parallaxElements = {
         bg: document.querySelectorAll('.parallax-bg'),
         slow: document.querySelectorAll('.parallax-slow'),
         medium: document.querySelectorAll('.parallax-medium'),
-        fast: document.querySelectorAll('.parallax-fast'),
-        elements: document.querySelectorAll('.parallax-element')
+        fast: document.querySelectorAll('.parallax-fast')
     };
     
-    // Observer untuk animasi
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const animationObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                
-            }
-        });
-    }, observerOptions);
-    
-    
-    parallaxElements.elements.forEach(element => {
-        animationObserver.observe(element);
-    });
-    
-    // Handler scroll yang optimal
+    // Enhanced scroll handler with proper background parallax
     function updateParallax() {
         if (!ticking) {
             requestAnimationFrame(() => {
                 const scrollTop = window.pageYOffset;
                 const windowHeight = window.innerHeight;
                 
-                
+                // Background parallax - gerak di semua device
                 parallaxElements.bg.forEach(element => {
                     const rect = element.getBoundingClientRect();
                     if (rect.bottom >= 0 && rect.top <= windowHeight) {
-                        const speed = 0.3; // Subtle movement
+                        // Speed berbeda untuk mobile dan desktop
+                        const speed = window.innerWidth <= 768 ? 0.1 : 0.2;
                         const yPos = -(scrollTop * speed);
                         element.style.transform = `translate3d(0, ${yPos}px, 0)`;
                     }
                 });
                 
-                
+                // Other parallax elements - smooth untuk semua device
                 parallaxElements.slow.forEach(element => {
                     const rect = element.getBoundingClientRect();
                     if (rect.bottom >= 0 && rect.top <= windowHeight) {
-                        const speed = 0.1;
+                        const speed = window.innerWidth <= 768 ? 0.03 : 0.05;
                         const yPos = -(scrollTop * speed);
                         element.style.transform = `translate3d(0, ${yPos}px, 0)`;
                     }
@@ -362,7 +326,7 @@ function initProfessionalParallax() {
                 parallaxElements.medium.forEach(element => {
                     const rect = element.getBoundingClientRect();
                     if (rect.bottom >= 0 && rect.top <= windowHeight) {
-                        const speed = 0.2;
+                        const speed = window.innerWidth <= 768 ? 0.05 : 0.1;
                         const yPos = -(scrollTop * speed);
                         element.style.transform = `translate3d(0, ${yPos}px, 0)`;
                     }
@@ -371,7 +335,7 @@ function initProfessionalParallax() {
                 parallaxElements.fast.forEach(element => {
                     const rect = element.getBoundingClientRect();
                     if (rect.bottom >= 0 && rect.top <= windowHeight) {
-                        const speed = 0.4;
+                        const speed = window.innerWidth <= 768 ? 0.08 : 0.15;
                         const yPos = -(scrollTop * speed);
                         element.style.transform = `translate3d(0, ${yPos}px, 0)`;
                     }
@@ -379,35 +343,59 @@ function initProfessionalParallax() {
                 
                 ticking = false;
             });
-            ticking = true;
         }
+        ticking = true;
     }
     
-    // Parallax mouse untuk elemen interaktif
+    // Parallax mouse untuk semua device - mobile juga boleh!
     function initMouseParallax() {
         const interactiveElements = document.querySelectorAll('.floating-element');
         
-        document.addEventListener('mousemove', throttle((e) => {
+        // Mouse events untuk desktop
+        document.addEventListener('mousemove', function(e) {
             const mouseX = e.clientX / window.innerWidth;
             const mouseY = e.clientY / window.innerHeight;
             
             interactiveElements.forEach((element, index) => {
-                const speed = (index + 1) * 0.5;
-                const x = (mouseX - 0.5) * speed * 10;
-                const y = (mouseY - 0.5) * speed * 10;
+                const speed = (index + 1) * 0.3; // Reduced speed
+                const x = (mouseX - 0.5) * speed * 5; // Reduced multiplier
+                const y = (mouseY - 0.5) * speed * 5;
                 
                 element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
             });
-        }, 16));
+        });
+        
+        // Touch events untuk mobile - biar mobile juga dapet parallax mouse!
+        document.addEventListener('touchmove', function(e) {
+            if (e.touches.length === 1) {
+                const touch = e.touches[0];
+                const touchX = touch.clientX / window.innerWidth;
+                const touchY = touch.clientY / window.innerHeight;
+                
+                interactiveElements.forEach((element, index) => {
+                    const speed = (index + 1) * 0.2; // Slightly reduced for touch
+                    const x = (touchX - 0.5) * speed * 4;
+                    const y = (touchY - 0.5) * speed * 4;
+                    
+                    element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+                });
+            }
+        }, { passive: true });
     }
     
-    // Inisialisasi parallax scroll
-    window.addEventListener('scroll', updateParallax, { passive: true });
+    // Throttled scroll event
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(updateParallax, 16); // ~60fps
+    }, { passive: true });
     
-    // Inisialisasi parallax mouse
+    // Initialize mouse parallax
     initMouseParallax();
     
-    // Inisialisasi saat load
+    // Initial call
     updateParallax();
 }
 

@@ -12,7 +12,7 @@
     --font-family: 'Plus Jakarta Sans', 'Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-/* Animasi profesional */
+/* Simple animations - no jentik */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -24,6 +24,17 @@
     }
 }
 
+/* Simple fade in animation */
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Prevent double animation */
+.animated {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 /* Efek parallax profesional */
 .parallax-container {
     position: relative;
@@ -33,15 +44,25 @@
 
 .parallax-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10%;
+    left: -10%;
     width: 120%;
     height: 120%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     will-change: transform;
     transform: translateZ(0);
+}
+
+/* Mobile parallax background - tetap gerak tapi halus */
+@media (max-width: 768px) {
+    .parallax-bg {
+        top: -5%;
+        left: -5%;
+        width: 110%;
+        height: 110%;
+        background-attachment: scroll;
+    }
 }
 
 .parallax-content {
@@ -113,6 +134,24 @@
     left: 20%;
     animation-delay: 4s;
     animation-duration: 10s;
+}
+
+/* Floating elements - responsive untuk mobile */
+@media (max-width: 768px) {
+    .floating-element:nth-child(1) {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .floating-element:nth-child(2) {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .floating-element:nth-child(3) {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 @keyframes float {
