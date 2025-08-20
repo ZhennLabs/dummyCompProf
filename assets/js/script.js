@@ -791,17 +791,12 @@ function initLoadMore() {
             const itemsToShow = portfolioItems.slice(portfolioCurrentItems, portfolioCurrentItems + portfolioItemsPerPage);
             
             itemsToShow.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.display = 'block';
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    
-                    setTimeout(() => {
-                        item.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 50);
-                }, index * 100);
+                item.style.display = 'block';
+                // Smooth animation without jerk
+                requestAnimationFrame(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                });
             });
             
             portfolioCurrentItems += portfolioItemsPerPage;
@@ -816,7 +811,8 @@ function initLoadMore() {
             portfolioItems.forEach(item => {
                 item.style.display = 'none';
                 item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
+                item.style.transform = 'translateY(10px)';
+                item.style.transition = 'all 0.3s ease';
             });
         }
         
@@ -849,17 +845,12 @@ function initLoadMore() {
             const itemsToShow = certificateItems.slice(certificateCurrentItems, certificateCurrentItems + certificateItemsPerPage);
             
             itemsToShow.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.display = 'block';
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    
-                    setTimeout(() => {
-                        item.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 50);
-                }, index * 100);
+                item.style.display = 'block';
+                // Smooth animation without jerk
+                requestAnimationFrame(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                });
             });
             
             certificateCurrentItems += certificateItemsPerPage;
@@ -874,7 +865,8 @@ function initLoadMore() {
             certificateItems.forEach(item => {
                 item.style.display = 'none';
                 item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
+                item.style.transform = 'translateY(10px)';
+                item.style.transition = 'all 0.3s ease';
             });
         }
         

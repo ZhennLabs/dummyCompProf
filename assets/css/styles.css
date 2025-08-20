@@ -159,27 +159,27 @@
     }
 }
 
-/* Efek hover dengan parallax */
+/* Efek hover yang halus tanpa jentik */
 .professional-hover {
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     will-change: transform;
     transform: translateZ(0);
 }
 
 .professional-hover:hover {
-    transform: translateY(-2px) translateZ(0);
-    box-shadow: 0 10px 30px rgba(153, 126, 52, 0.08);
+    transform: translateY(-1px) translateZ(0);
+    box-shadow: 0 8px 20px rgba(153, 126, 52, 0.06);
 }
 
 .card-hover {
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     will-change: transform;
     transform: translateZ(0);
 }
 
 .card-hover:hover {
-    transform: translateY(-3px) translateZ(0);
-    box-shadow: 0 15px 40px rgba(153, 126, 52, 0.1);
+    transform: translateY(-2px) translateZ(0);
+    box-shadow: 0 10px 25px rgba(153, 126, 52, 0.08);
 }
 
 /* Animasi section dengan parallax */
@@ -248,52 +248,55 @@
     box-shadow: 0 8px 25px rgba(153, 126, 52, 0.2);
 }
 
-/* Load More Text Buttons */
+/* Load More Text Buttons - Smooth Animation */
 #portfolio-load-more button,
 #certificate-load-more button {
     position: relative;
     color: var(--primary-color);
     font-weight: 600;
     font-size: 0.875rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
     border: none;
     background: none;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
 }
 
 #portfolio-load-more button:hover,
 #certificate-load-more button:hover {
     color: #b8860b;
-    transform: translateY(-1px);
+    background: rgba(185, 134, 11, 0.1);
+    transform: translateY(0);
 }
 
 #portfolio-load-more button i,
 #certificate-load-more button i {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 #portfolio-load-more button:hover i,
 #certificate-load-more button:hover i {
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 
-/* Load More Animation */
-@keyframes loadMoreFadeIn {
+/* Smooth Load More Animation */
+@keyframes smoothFadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
     }
 }
 
 .load-more-item {
-    animation: loadMoreFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: smoothFadeIn 0.3s ease forwards;
 }
 
 /* Animasi tombol yang halus */
